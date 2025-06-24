@@ -1,12 +1,37 @@
-# React + Vite
+# 🔐 KeyNest – Browser-Based Password Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+KeyNest is a simple, secure, and privacy-first password manager built with **React**. It helps you save and organize your website usernames and passwords directly in your browser using **LocalStorage**. No sign-up, no server, no data tracking—everything stays on your device.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🌐 **Client-side only** – No server or database required
+- 🔐 **Privacy-focused** – Data is stored only in your browser (LocalStorage)
+- 🧠 **Easy to use** – Add, edit, delete credentials easily
+- 📱 **Responsive** – Works on all screen sizes
+- 💻 **Open Source** – Freely available for contributions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🔒 How Your Data is Stored
+
+KeyNest does **not** send or store your data on any backend or cloud server. All your saved information is stored **only in your browser's LocalStorage**.
+
+### 🔍 How to View Your LocalStorage
+
+1. Open KeyNest in your browser.
+2. Right-click anywhere on the page and select **Inspect**.
+3. Go to the **Application** tab.
+4. In the left menu, expand **Storage > LocalStorage** and click on the KeyNest site.
+5. You’ll see your saved data – accessible only on your device.
+
+---
+
+## 🛠️ Installation
+
+```bash
+git clone https://github.com/MaheshJV9130/keynest.git
+cd keynest
+npm install
+npm run dev

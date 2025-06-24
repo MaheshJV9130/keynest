@@ -1,4 +1,7 @@
 import Navbar from "./components/Navbar"
+import Manager from "./components/Manager"
+import Footer from "./components/Footer"
+
 
 
 function App() {
@@ -7,8 +10,8 @@ function App() {
   return (
     <>
     <Navbar/>
-      <h1>Hello</h1>
-      <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut porro sit odit quo quaerat facere ad eum officiis cupiditate libero voluptate atque ratione, est amet ea nobis eaque perferendis, nostrum, itaque eveniet dolore quam adipisci facilis iste. Perferendis ratione laudantium eveniet esse sed quos? Animi, eum nobis expedita quod eligendi ullam exercitationem amet? Quo in id voluptatem. Praesentium fuga doloremque voluptatum sed quos numquam doloribus aperiam ducimus nesciunt dolores vitae, incidunt odit nulla, quas quo tempora? Illo nemo quasi suscipit alias, ab et neque aliquid laborum nobis corrupti nam amet blanditiis repellendus, quam ratione perferendis. Libero aliquam dolore molestias tempore neque perspiciatis voluptatibus recusandae optio facere nihil, error distinctio quas accusantium alias provident impedit magnam saepe nemo ea fugiat, debitis tenetur dolorum. Quasi est eius odio quidem maxime eaque laboriosam! Impedit pariatur molestiae autem earum odit, repudiandae voluptatibus doloribus assumenda sint sequi consectetur natus corporis libero itaque officia ipsa labore hic repellat? Exercitationem laudantium velit laboriosam assumenda omnis aperiam maxime vitae, quis nostrum saepe officia amet odit qui eligendi? Eius, dolor iste! Aspernatur expedita omnis harum maxime nulla, minus magnam vero soluta optio adipisci cum nemo quae dolorum recusandae corporis ad dignissimos sequi eos laborum similique quia possimus. Quod alias facilis cumque! Ipsum ut earum culpa nemo nam, qui nihil, odio aliquam maxime asperiores quis placeat explicabo corrupti dignissimos! At unde ut exercitationem. Nostrum reprehenderit dolores deleniti eos quia et porro ea atque quos, voluptate omnis hic adipisci magnam expedita esse pariatur officia. Libero magnam aliquam ea, recusandae modi natus deleniti, blanditiis porro expedita omnis id ex odit eius? Nam ducimus ad consectetur eum porro neque corporis dolorem ea natus quidem. Beatae quis, illo officiis, rerum placeat quo, fuga in tenetur a omnis quae autem debitis labore dolore totam? Officia distinctio quos, quo nam maiores ipsam quia, fugiat repellendus in itaque dolores ea velit rerum eum, autem molestiae? Sint qui neque sit quasi facere dicta, velit quia, ratione accusamus aperiam beatae eveniet iusto, repellendus sunt. Perferendis debitis consequatur harum necessitatibus omnis? Ipsa id debitis temporibus velit harum minus consequuntur quia cupiditate. Sunt dolorem magnam optio nemo accusantium nesciunt porro consequatur voluptate, minima officiis fugit? Ducimus quam laborum quaerat quisquam placeat sed nisi, temporibus et vitae molestiae sequi ut dolorum dolore. Quaerat ratione eum voluptatum ut quibusdam quasi fuga, voluptatem, expedita nam quas at incidunt modi. Vel provident sunt eveniet tenetur atque quisquam dignissimos blanditiis. Voluptates perferendis veritatis magnam ut, sunt ducimus et, ipsa tempore vel ratione eius non ipsum, repudiandae amet vero iste. Pariatur blanditiis eveniet debitis unde, porro ex facere fugit modi quia ea totam nisi libero! Explicabo et, in vitae, ut laboriosam ea iste ipsa est dolores distinctio nam corporis aliquam veniam perspiciatis. Veritatis quasi reiciendis alias quo quis velit?</h3>
+     <Manager/>
+     <Footer/>
     </>
   )
 }
