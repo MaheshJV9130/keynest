@@ -1,96 +1,79 @@
 import { ToastContainer, toast } from "react-toastify";
+
 const Table = ({ data, handleEdit, handleDelete }) => {
-  function copyText(text) {
+  const copyText = (text) => {
     navigator.clipboard.writeText(text);
-    toast("✔️ Copied...!", {
+    toast.success("✔️ Copied!", {
       position: "top-right",
       autoClose: 800,
       hideProgressBar: false,
-      closeOnClick: false,
+      closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
-      progress: undefined,
       theme: "dark",
-     
     });
-  }
+  };
 
   return (
     <div className="container mx-auto">
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick={false}
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-        
-      />
+      <ToastContainer />
       <table className="text-left w-full text-xs sm:text-base">
-        <thead className="bg-black flex text-white w-full">
-          <tr className="flex w-full mb-4 text-center">
+        <thead className="bg-black text-white">
+          <tr className="text-center">
             <th className="p-4 w-1/4">Website</th>
             <th className="p-4 w-1/4">Username</th>
             <th className="p-4 w-1/4">Password</th>
             <th className="p-4 w-1/4">Action</th>
           </tr>
         </thead>
-        <tbody className="bg-grey-light flex flex-col items-center justify-between overflow-y-scroll w-full">
+        <tbody className="bg-gray-100">
           {data.map((form, index) => (
-            <tr key={index} className="flex w-full mb-4">
-              <td className="p-4 w-1/4 flex justify-center items-center text-center">
+            <tr key={index} className="text-center border-b">
+              <td className="p-4 w-1/4 flex justify-center items-center gap-2">
                 {form.website}
                 <img
                   src="/copy.gif"
-                  alt="copy"
-                  width={30}
-                  className="invert-100 cursor-pointer"
+                  alt="Copy"
+                  width={20}
+                  className="cursor-pointer"
                   onClick={() => copyText(form.website)}
                 />
               </td>
-              <td className="p-4 w-1/4 flex justify-center items-center text-center">
+              <td className="p-4 w-1/4 flex justify-center items-center gap-2">
                 {form.username}
                 <img
                   src="/copy.gif"
-                  alt="copy"
-                  width={30}
-                  className="invert-100 cursor-pointer"
+                  alt="Copy"
+                  width={20}
+                  className="cursor-pointer"
                   onClick={() => copyText(form.username)}
                 />
               </td>
-              <td className="p-4 w-1/4 flex justify-center items-center text-center">
+              <td className="p-4 w-1/4 flex justify-center items-center gap-2">
                 {form.password}
                 <img
                   src="/copy.gif"
-                  alt="copy"
-                  width={30}
-                  className="invert-100 cursor-pointer"
-                  aria-label="Copy"
+                  alt="Copy"
+                  width={20}
+                  className="cursor-pointer"
                   onClick={() => copyText(form.password)}
                 />
               </td>
-
-              <td className="p-4 w-1/4 flex gap-5 justify-center items-center ">
-                <button onClick={()=>handleEdit(form.id)}>
+              <td className="p-4 w-1/4 flex justify-center items-center gap-4">
+                <button onClick={() => handleEdit(form.id)}>
                   <img
                     src="/edit.gif"
-                    alt="edit"
-                    aria-label="Edit"
-                    width={30}
-                    className="invert-100 cursor-pointer"
+                    alt="Edit"
+                    width={20}
+                    className="cursor-pointer"
                   />
                 </button>
-                <button onClick={()=>handleDelete(form.id)}>
+                <button onClick={() => handleDelete(form.id)}>
                   <img
                     src="/delete.gif"
-                    alt="delete"
-                    aria-label="Delete"
-                    width={30}
-                    className="invert-100 cursor-pointer"
+                    alt="Delete"
+                    width={20}
+                    className="cursor-pointer"
                   />
                 </button>
               </td>
