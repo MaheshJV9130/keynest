@@ -6,7 +6,7 @@ const Navbar = () => {
       <nav className="bg-slate-800 text-white h-14 flex justify-evenly items-center p-4 w-screen">
         <div className="logo ">
           <img
-            src="/src/assets/logo/logo-transparent-png.png"
+            src="/logo-transparent-png.png"
             alt="logo"
             width={150}
           />
