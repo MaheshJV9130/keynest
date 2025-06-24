@@ -16,7 +16,7 @@ const Table = ({ data, handleEdit, handleDelete }) => {
       <ToastContainer />
 
       <table className="w-full text-left text-sm sm:text-base my-6">
-        <thead className="bg-black text-white max-sm:hidden">
+        <thead className="bg-[#23263a] text-green-400 max-sm:hidden rounded-t-xl my-2">
           <tr className="grid grid-cols-4 text-center">
             <th className="p-3 font-bold">Website</th>
             <th className="p-3 font-bold">Username</th>
@@ -29,11 +29,11 @@ const Table = ({ data, handleEdit, handleDelete }) => {
           {data.map((form, index) => (
             <tr
               key={index}
-              className="grid grid-cols-1 sm:grid-cols-4 bg-slate-800 border border-gray-300 rounded-xl text-white shadow-sm p-2 sm:p-0"
+              className="grid grid-cols-1 sm:grid-cols-4 bg-[#181a20] text-white border border-[#2f334d] rounded-xl shadow-md transition hover:shadow-lg"
             >
               {/* Website */}
-              <td className="flex sm:justify-center items-center gap-2 px-3 py-2 sm:p-4">
-                <span className="sm:hidden font-semibold w-24">Website:</span>
+              <td className="flex sm:justify-center items-center gap-2 px-3 py-2 sm:p-4 text-sm sm:text-base">
+                <span className="sm:hidden font-semibold w-24 text-gray-400">Website:</span>
                 <span className="flex items-center gap-2 break-all">
                   {form.website}
                   <img
@@ -48,7 +48,7 @@ const Table = ({ data, handleEdit, handleDelete }) => {
 
               {/* Username */}
               <td className="flex sm:justify-center items-center gap-2 px-3 py-2 sm:p-4">
-                <span className="sm:hidden font-semibold w-24">Username:</span>
+                <span className="sm:hidden font-semibold w-24 text-gray-400">Username:</span>
                 <span className="flex items-center gap-2 break-all">
                   {form.username}
                   <img
@@ -63,7 +63,7 @@ const Table = ({ data, handleEdit, handleDelete }) => {
 
               {/* Password */}
               <td className="flex sm:justify-center items-center gap-2 px-3 py-2 sm:p-4">
-                <span className="sm:hidden font-semibold w-24">Password:</span>
+                <span className="sm:hidden font-semibold w-24 text-gray-400">Password:</span>
                 <span className="flex items-center gap-2 break-all">
                   {form.password}
                   <img
@@ -78,7 +78,7 @@ const Table = ({ data, handleEdit, handleDelete }) => {
 
               {/* Action */}
               <td className="flex sm:justify-center items-center gap-4 px-3 py-2 sm:p-4">
-                <span className="sm:hidden font-semibold w-24">Action:</span>
+                <span className="sm:hidden font-semibold w-24 text-gray-400">Action:</span>
                 <button onClick={() => handleEdit(form.id)} aria-label="Edit">
                   <img
                     src="/edit.gif"
