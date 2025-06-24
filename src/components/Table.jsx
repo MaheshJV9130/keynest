@@ -1,79 +1,98 @@
 import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Table = ({ data, handleEdit, handleDelete }) => {
   const copyText = (text) => {
     navigator.clipboard.writeText(text);
     toast.success("✔️ Copied!", {
       position: "top-right",
-      autoClose: 800,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
+      autoClose: 1000,
       theme: "dark",
     });
   };
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto px-4">
       <ToastContainer />
-      <table className="text-left w-full text-xs sm:text-base">
-        <thead className="bg-black text-white">
-          <tr className="text-center">
-            <th className="p-4 w-1/4">Website</th>
-            <th className="p-4 w-1/4">Username</th>
-            <th className="p-4 w-1/4">Password</th>
-            <th className="p-4 w-1/4">Action</th>
+
+      <table className="w-full text-left text-sm sm:text-base my-6">
+        <thead className="bg-black text-white max-sm:hidden">
+          <tr className="grid grid-cols-4 text-center">
+            <th className="p-3 font-bold">Website</th>
+            <th className="p-3 font-bold">Username</th>
+            <th className="p-3 font-bold">Password</th>
+            <th className="p-3 font-bold">Action</th>
           </tr>
         </thead>
-        <tbody className="bg-gray-100">
+
+        <tbody className="flex flex-col gap-4">
           {data.map((form, index) => (
-            <tr key={index} className="text-center border-b">
-              <td className="p-4 w-1/4 flex justify-center items-center gap-2">
-                {form.website}
-                <img
-                  src="/copy.gif"
-                  alt="Copy"
-                  width={20}
-                  className="cursor-pointer"
-                  onClick={() => copyText(form.website)}
-                />
+            <tr
+              key={index}
+              className="grid grid-cols-1 sm:grid-cols-4 bg-slate-800 border border-gray-300 rounded-xl text-white shadow-sm p-2 sm:p-0"
+            >
+              {/* Website */}
+              <td className="flex sm:justify-center items-center gap-2 px-3 py-2 sm:p-4">
+                <span className="sm:hidden font-semibold w-24">Website:</span>
+                <span className="flex items-center gap-2 break-all">
+                  {form.website}
+                  <img
+                    src="/copy.gif"
+                    alt="copy"
+                    width={18}
+                    className="cursor-pointer hover:scale-110 transition"
+                    onClick={() => copyText(form.website)}
+                  />
+                </span>
               </td>
-              <td className="p-4 w-1/4 flex justify-center items-center gap-2">
-                {form.username}
-                <img
-                  src="/copy.gif"
-                  alt="Copy"
-                  width={20}
-                  className="cursor-pointer"
-                  onClick={() => copyText(form.username)}
-                />
+
+              {/* Username */}
+              <td className="flex sm:justify-center items-center gap-2 px-3 py-2 sm:p-4">
+                <span className="sm:hidden font-semibold w-24">Username:</span>
+                <span className="flex items-center gap-2 break-all">
+                  {form.username}
+                  <img
+                    src="/copy.gif"
+                    alt="copy"
+                    width={18}
+                    className="cursor-pointer hover:scale-110 transition"
+                    onClick={() => copyText(form.username)}
+                  />
+                </span>
               </td>
-              <td className="p-4 w-1/4 flex justify-center items-center gap-2">
-                {form.password}
-                <img
-                  src="/copy.gif"
-                  alt="Copy"
-                  width={20}
-                  className="cursor-pointer"
-                  onClick={() => copyText(form.password)}
-                />
+
+              {/* Password */}
+              <td className="flex sm:justify-center items-center gap-2 px-3 py-2 sm:p-4">
+                <span className="sm:hidden font-semibold w-24">Password:</span>
+                <span className="flex items-center gap-2 break-all">
+                  {form.password}
+                  <img
+                    src="/copy.gif"
+                    alt="copy"
+                    width={18}
+                    className="cursor-pointer hover:scale-110 transition"
+                    onClick={() => copyText(form.password)}
+                  />
+                </span>
               </td>
-              <td className="p-4 w-1/4 flex justify-center items-center gap-4">
-                <button onClick={() => handleEdit(form.id)}>
+
+              {/* Action */}
+              <td className="flex sm:justify-center items-center gap-4 px-3 py-2 sm:p-4">
+                <span className="sm:hidden font-semibold w-24">Action:</span>
+                <button onClick={() => handleEdit(form.id)} aria-label="Edit">
                   <img
                     src="/edit.gif"
-                    alt="Edit"
-                    width={20}
-                    className="cursor-pointer"
+                    alt="edit"
+                    width={18}
+                    className="cursor-pointer hover:scale-110 transition"
                   />
                 </button>
-                <button onClick={() => handleDelete(form.id)}>
+                <button onClick={() => handleDelete(form.id)} aria-label="Delete">
                   <img
                     src="/delete.gif"
-                    alt="Delete"
-                    width={20}
-                    className="cursor-pointer"
+                    alt="delete"
+                    width={18}
+                    className="cursor-pointer hover:scale-110 transition"
                   />
                 </button>
               </td>
