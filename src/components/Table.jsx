@@ -12,7 +12,7 @@ const Table = ({ data, handleEdit, handleDelete }) => {
   };
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 overflow-hidden">
       <ToastContainer />
 
       <table className="w-full text-left text-sm sm:text-base my-6">
@@ -29,7 +29,7 @@ const Table = ({ data, handleEdit, handleDelete }) => {
           {data.map((form, index) => (
             <tr
               key={index}
-              className="grid grid-cols-1 sm:grid-cols-4 bg-[#181a20] text-white border border-[#2f334d] rounded-xl shadow-md transition hover:shadow-lg"
+              className="grid grid-cols-1 sm:grid-cols-4 bg-[#9fb1e85d] text-white border border-[#2f334d] rounded-xl shadow-md transition hover:shadow-lg"
             >
               {/* Website */}
               <td className="flex sm:justify-center items-center gap-2 px-3 py-2 sm:p-4 text-sm sm:text-base">
